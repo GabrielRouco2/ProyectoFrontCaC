@@ -128,10 +128,10 @@ body {
   align-items: center;
 }
 
-.searchTitle {
+.sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 40px;
 }
 
 .formSearch {
@@ -174,4 +174,16 @@ hr {
   border: 1px solid #9f3647;
   width: 80%;
   margin: 0 auto;
+}
+
+.popularMovies {
+  width: 80%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
 }
