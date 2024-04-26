@@ -105,12 +105,12 @@ footer {
     row-gap: 10px;
   }
 }
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-.loading-screen{
+.loading-screen {
   width: 100%;
   height: 100vh;
   background-color: #2e2e2e;
@@ -118,22 +118,23 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: hide-loading-screen 3s forwards; /* Animación para ocultar el contenedor */
 }
 
-.loading{
+.loading {
   width: 80px;
   display: flex;
   flex-wrap: wrap;
   animation: rotate 3s linear infinite;
 }
 
-@keyframes rotate{
-  to{
+@keyframes rotate {
+  to {
     transform: rotate(360deg);
   }
 }
 
-.loading span{
+.loading span {
   width: 32px;
   height: 32px;
   background-color: red;
@@ -141,39 +142,46 @@ footer {
   animation: scale 1.5s linear infinite;
 }
 
-@keyframes scale{
-  50%{
+@keyframes scale {
+  50% {
     transform: scale(1.2);
   }
 }
 
-.loading span:nth-child(1){
+.loading span:nth-child(1) {
   border-radius: 50% 50% 0 50%;
   background-color: #ffbe0b;
   transform-origin: bottom right;
 }
 
-.loading span:nth-child(2){
+.loading span:nth-child(2) {
   border-radius: 50% 50% 50% 0;
   background-color: #ff006e;
   transform-origin: bottom left;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
-.loading span:nth-child(3){
+.loading span:nth-child(3) {
   border-radius: 50% 0 50% 50%;
   background-color: #fb5607;
   transform-origin: top right;
   animation-delay: 1.5s;
 }
 
-.loading span:nth-child(4){
+.loading span:nth-child(4) {
   border-radius: 0 50% 50% 50%;
   background-color: #8338ec;
   transform-origin: top left;
   animation-delay: 1s;
 }
 
+/* Animación para ocultar el contenedor */
+@keyframes hide-loading-screen {
+  to {
+    opacity: 0; /* Reducir la opacidad */
+    visibility: hidden; /* Ocultar el contenedor */
+  }
+}
 .sectionTitles {
   height: 85vh;
   background: linear-gradient(to bottom, #000000a3, #000000a3),
